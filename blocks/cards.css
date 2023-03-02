@@ -39,14 +39,14 @@
 }
 
 
-.card__like_button {
+.card__like-button {
   border-style: none;
   background-color: inherit;
   margin: 0;
   cursor: pointer;
 }
 
-.card__like_icon {
+.card__like-icon {
   height: 18px;
   width: 21px;
 }
