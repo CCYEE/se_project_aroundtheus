@@ -1,0 +1,155 @@
+.profile {
+  max-width: 880px;
+  width: calc(100% - 54px/2);
+  display: flex;
+  align-items: center;
+  margin: 40px auto 51px;
+  padding: 0;
+}
+
+.profile__picture {
+  height: 120px;
+  width: 120px;
+  margin-right: 30px;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile__author {
+  font-family: 'Inter', san-serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 48px;
+  margin: 0 18px 0 0;
+  padding: 0;
+}
+
+.profile__edit_button {
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  transition: opacity 0.35s;
+  cursor: pointer;
+}
+
+.profile__edit_button:hover {
+  opacity: 0.6;
+}
+
+.profile__subtitle {
+  font-family: 'Inter', san-serif;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.profile__edit_icon {
+  height: 10px;
+  width: 10px;
+}
+
+.profile__add_button {
+  height: 50px;
+  width: 150px;
+  background-color: black;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  transition: opacity 0.35s;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.profile__add_icon {
+  height: 22px;
+  width: 22px;
+}
+
+.profile__add_button:hover {
+  opacity: 0.6;
+}
+
+
+@media screen and (max-width: 768px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 38.25px 0 0 0;
+    width: calc(100% - 27px/2);
+  }
+
+  .profile__picture {
+  margin: 0 0 26.25px 0;
+  }
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile__title {
+    margin-bottom: 14px;
+  }
+
+  .profile__author {
+    margin-right: 10px;
+    text-align: center;
+  }
+  .profile__add_button {
+    margin: 0;
+  }
+
+  .profile__subtitle {
+    margin-bottom: 36px;
+  }
+
+  .profile__add_button {
+    margin-bottom: 36px;
+    width: 282px;
+    height: 50px;
+  }
+  .profile__add_icon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .profile__edit_button {
+    height: 18px;
+    width: 18px;
+    padding: 0;
+  }
+  .profile__edit_icon {
+    height: 7.5px;
+    width: 7.5px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .profile {
+    width: 100%;
+  }
+  .profile__author {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+  }
+  .profile__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
