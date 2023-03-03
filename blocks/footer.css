@@ -1,11 +1,21 @@
 .footer {
   max-width: 880px;
-  width: calc(100% - 54px/2);
-  color: #545454;
+  width: calc(100% - 38px);
+  margin: 67px auto 0;
+  padding-bottom: 60px;
+  color: #545454;  
+}
+
+.footer__copyright{
+
   font-family: 'Inter', san-serif;
   font-size: 18px;
   line-height: 22px;
+}
 
-  margin: 67px auto 0;
-  padding-bottom: 60px;
+@media screen and (max-width: 320px) {
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

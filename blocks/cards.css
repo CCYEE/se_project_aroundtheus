@@ -3,7 +3,7 @@
   width: calc(100% - 54px/2);
   display: grid;
   grid-template-columns: repeat(auto-fit, 282px);
-  grid-gap: 20px 17px;
+  gap: 20px 17px;
   margin: 0 auto;
   justify-content: center;
 }
@@ -38,12 +38,16 @@
   margin: 0;
 }
 
-
 .card__like-button {
   border-style: none;
   background-color: inherit;
   margin: 0;
   cursor: pointer;
+  transition: opacity 0.35s;
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
 }
 
 .card__like-icon {
