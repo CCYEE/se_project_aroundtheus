@@ -11,11 +11,19 @@
   font-family: 'Inter', san-serif;
   font-size: 18px;
   line-height: 22px;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 320px) {
+  .footer {
+    margin: 48px 0 0;
+    padding: 0;
+  }
   .footer__copyright {
     font-size: 14px;
     line-height: 17px;
+    margin: 0 19px 0;
+    padding-bottom: 36px;
   }
 }
