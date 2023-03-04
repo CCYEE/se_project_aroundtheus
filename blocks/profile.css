@@ -1,6 +1,6 @@
 .profile {
   max-width: 880px;
-  width: calc(100% - 54px / 2);
+  width: calc(100% - 54px);
   display: flex;
   align-items: center;
   margin: 40px auto 51px;
@@ -112,6 +112,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 36px;
+    max-width: 100%;
   }
 
   .profile__title {
@@ -129,6 +130,7 @@
   .profile__subtitle {
     font-size: 14px;
     line-height: 17px;
+    max-width: 100%;
   }
 
   .profile__add-button {
