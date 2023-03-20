@@ -20,6 +20,7 @@
 }
 
 .card__title {
+  font-family: "Inter", Arial, sans-serif;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

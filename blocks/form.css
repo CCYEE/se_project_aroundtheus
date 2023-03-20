@@ -70,7 +70,7 @@
   }
 
   .form__save-button {
-    width: 238px;
+    width: 100%;
     font-size: 18px;
     line-height: 17px;
   }
