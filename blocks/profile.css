@@ -29,7 +29,7 @@
 }
 
 .profile__author {
-  font-family: "Inter", san-serif;
+  font-family: "Inter", Arial, san-serif;
   font-size: 42px;
   font-weight: 500;
   line-height: 48px;
@@ -60,7 +60,7 @@
 }
 
 .profile__subtitle {
-  font-family: "Inter", san-serif;
+  font-family: "Inter", Arial, san-serif;
   font-size: 18px;
   line-height: 21px;
   margin: 0;
