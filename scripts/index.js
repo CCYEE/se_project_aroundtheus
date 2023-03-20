@@ -1,4 +1,4 @@
-let initialCards = [
+const initialCards = [
   {
     name: "Yosemite Valley",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
@@ -26,14 +26,14 @@ let initialCards = [
 ];
 
 //Variables
-let userAuthor = document.querySelector(".profile__author");
-let userDescription = document.querySelector(".profile__subtitle");
+const userAuthor = document.querySelector(".profile__author");
+const userDescription = document.querySelector(".profile__subtitle");
 const modal = document.querySelector(".modal");
 const editButton = document.querySelector(".profile__edit-button");
-const closeButton = document.querySelector(".modal__close-button");
+const closeModalButton = document.querySelector(".modal__close-button");
 const saveButton = document.querySelector("form__save-button");
-let modalEditName = document.querySelector(".form__input_type_name");
-let modalEditDescription = document.querySelector(
+const modalEditName = document.querySelector(".form__input_type_name");
+const modalEditDescription = document.querySelector(
   ".form__input_type_description"
 );
 const cardListEl = document.querySelector(".cards");
@@ -41,11 +41,11 @@ const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
 //Functions
-function openModal() {
+function fillModalForm() {
   modalEditName.value = userAuthor.innerText;
   modalEditDescription.value = userDescription.innerText;
 }
-function editModal() {
+function openEditModal() {
   modal.classList.add("modal_opened");
 }
 function closeModal() {
@@ -55,7 +55,7 @@ function saveModal(event) {
   event.preventDefault();
   userAuthor.textContent = modalEditName.value;
   userDescription.textContent = modalEditDescription.value;
-  modal.classList.remove("modal_opened");
+  closeModal();
 }
 
 function getCardElement(data) {
@@ -71,10 +71,10 @@ function getCardElement(data) {
 //Event Listeners
 modal.addEventListener("submit", saveModal);
 editButton.addEventListener("click", function () {
-  openModal();
-  editModal();
+  fillModalForm();
+  openEditModal();
 });
-closeButton.addEventListener("click", function () {
+closeModalButton.addEventListener("click", function () {
   closeModal();
 });
 

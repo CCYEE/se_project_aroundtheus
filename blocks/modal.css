@@ -25,12 +25,10 @@
 
 
 .modal__close-button {
-  background: url(../images/close-icon.png);
+  background: url(../images/close-icon.png) no-repeat center;
   height: 40px;
   width: 40px;
   position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: contain;
   margin: 0;
   padding: 0;
