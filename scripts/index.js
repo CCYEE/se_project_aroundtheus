@@ -36,6 +36,9 @@ let modalEditName = document.querySelector(".form__input_type_name");
 let modalEditDescription = document.querySelector(
   ".form__input_type_description"
 );
+const cardListEl = document.querySelector(".cards");
+const cardTemplate =
+  document.querySelector("#card-template").content.firstElementChild;
 
 //Functions
 function openModal() {
@@ -55,6 +58,16 @@ function saveModal(event) {
   modal.classList.remove("modal_opened");
 }
 
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardImageEl = cardElement.querySelector(".card__image");
+  const cardNameEl = cardElement.querySelector(".card__title");
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+  cardNameEl.textContent = data.name;
+  return cardElement;
+}
+
 //Event Listeners
 modal.addEventListener("submit", saveModal);
 editButton.addEventListener("click", function () {
@@ -63,4 +76,9 @@ editButton.addEventListener("click", function () {
 });
 closeButton.addEventListener("click", function () {
   closeModal();
+});
+
+initialCards.forEach((data) => {
+  const cardElement = getCardElement(data);
+  cardListEl.append(cardElement);
 });

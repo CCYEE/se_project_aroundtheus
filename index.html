@@ -74,116 +74,20 @@
           </form>
 
         </section>
+        <section class="cards"></section>
 
-        <section class="cards">
-          <div class="card">
-            <img
-              class="card__picture"
-              src="./images/yosemite.jpg"
-              alt="Picture of Yosemite Valley"
-            />
-            <div class="card__caption">
-              <h2 class="card__caption-name">Yosemite Valley</h2>
-              <button class="card__like-button" type="button">
-                <img
-                  class="card__like-icon"
-                  src="./images/like-icon.svg"
-                  alt="like icon"
-                />
+        <template id="card-template">
+          <li class="card">
+            <img src="" class="card__image" alt="">
+            <div class="card__info">
+              <h2 class="card__title"></h2>
+              <button class="card__button" type="button">
+                <img class="card__button-like" src="./images/like-icon.svg" alt="like-button" />
               </button>
             </div>
-          </div>
+          </li>
+        </template> 
 
-          <div class="card">
-            <img
-              class="card__picture"
-              src="./images/lake-louise.jpg"
-              alt="Picture of Lake Louise"
-            />
-            <div class="card__caption">
-              <h2 class="card__caption-name">Lake Louise</h2>
-              <button class="card__like-button" type="button">
-                <img
-                  class="card__like-icon"
-                  src="./images/like-icon.svg"
-                  alt="like icon"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card__picture"
-              src="./images/bald-mountains.jpg"
-              alt="Picture of the Bald Mountains"
-            />
-            <div class="card__caption">
-              <h2 class="card__caption-name">Bald Mountain</h2>
-              <button class="card__like-button" type="button">
-                <img
-                  class="card__like-icon"
-                  src="./images/like-icon.svg"
-                  alt="like icon"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card__picture"
-              src="./images/latemar.jpg"
-              alt="Picture of  Latemar"
-            />
-            <div class="card__caption">
-              <h2 class="card__caption-name">Latemar</h2>
-              <button class="card__like-button" type="button">
-                <img
-                  class="card__like-icon"
-                  src="./images/like-icon.svg"
-                  alt="like icon"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card__picture"
-              src="./images/vanoise.jpg"
-              alt="Picture of Vanoise National Park"
-            />
-            <div class="card__caption">
-              <h2 class="card__caption-name">Vanoise National Park</h2>
-              <button class="card__like-button" type="button">
-                <img
-                  class="card__like-icon"
-                  src="./images/like-icon.svg"
-                  alt="like icon"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card__picture"
-              src="./images/lago.jpg"
-              alt="Picture of Lago di Braies"
-            />
-            <div class="card__caption">
-              <h2 class="card__caption-name">Lago di Braies</h2>
-              <button class="card__like-button" type="button">
-                <img
-                  class="card__like-icon"
-                  src="./images/like-icon.svg"
-                  alt="like icon"
-                />
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer class="footer">
