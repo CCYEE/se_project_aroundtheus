@@ -47,6 +47,8 @@ const closeEditModalButton = editProfileModal.querySelector(
   ".modal__close-button"
 );
 
+const trashButton = document.querySelector(".card__trash-button");
+
 const cardListEl = document.querySelector(".cards");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
@@ -59,8 +61,8 @@ function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
 
-function renderCard(data, wrapper) {
-  const cardElement = getCardElement(data);
+FIXME: function newCard(cardData, wrapper) {
+  const cardElement = getCardElement(cardData);
   wrapper.prepend(cardElement);
 }
 
@@ -75,17 +77,17 @@ function handleAddCardFormSubmit(event) {
   event.preventDefault();
   const name = modalEditTitle.value;
   const link = modalEditUrl.value;
-  renderCard({ name, link }, cardListEl);
+  newCard({ name, link }, cardListEl);
   closeModal(addCardModal);
 }
 
-function getCardElement(data) {
+FIXME: function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardNameEl = cardElement.querySelector(".card__title");
-  cardImageEl.src = data.link;
-  cardImageEl.alt = data.name;
-  cardNameEl.textContent = data.name;
+  cardImageEl.src = cardData.link;
+  cardImageEl.alt = cardData.name;
+  cardNameEl.textContent = cardData.name;
   return cardElement;
 }
 
@@ -110,8 +112,8 @@ addCardCloseButton.addEventListener("click", () => {
   closeModal(addCardModal);
 });
 
-initialCards.forEach((data) => {
-  renderCard(data, cardListEl);
+FIXME: initialCards.forEach((cardData) => {
+  newCard(cardData, cardListEl);
 });
 
 const likeButtons = document.querySelectorAll(".card__like-button");
