@@ -30,15 +30,21 @@
   line-height: 29px;
 }
 
-.card__button {
+.card__like-button {
   border: none;
-  background-color: transparent;
   margin-right: 20px;
   margin-bottom: 30px;
   margin-top: 31px;
+  background: transparent url(../images/like-inactive.svg) center no-repeat;
+  width: 21px;
+  height: 19px;
 }
 
-.card__button:hover {
+.card__like-button_active {
+  background-image: url(../images/like-active.png);
+}
+
+.card__like-button:hover {
   cursor: pointer;
   transition: 0.5s;
   opacity: 0.5;

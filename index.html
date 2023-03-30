@@ -48,32 +48,64 @@
           <button class="profile__add-button" type="button"></button>
         </section>
 
-        <section class="modal">
-          <form class="modal__container form">
-            <button class="modal__close-button" type="button"></button>
-            <h2 class="form__title">Edit profile</h2>
-            <fieldset class="form__fieldset">
-              <label for="name" class="form__label"></label>
+        <!--EDIT MODAL-->
+        <section class="modal" id="edit-modal">
+          <div class="modal__container">
+            <form class="modal__form" id="edit-profile-form">
+              <button class="modal__close-button" type="button"></button>
+              <h2 class="form__title">Edit profile</h2>
+              <fieldset class="form__fieldset">
+                <label for="name" class="form__label"></label>
+                <input
+                class="form__input form__input_type_name"
+                type="text"
+                placeholder="Name"
+                name="name"
+                required
+              />
+              <label for="description" class="form__label"></label>
               <input
-              class="form__input form__input_type_name"
-              type="text"
-              placeholder="Name"
-              id="name"
-              required
-            />
-            <label for="description" class="form__label"></label>
-            <input
-              class="form__input form__input_type_description"
-              type="text"
-              placeholder="Description"
-              id="description"
-              required
-            />
-            </fieldset>
-            <button class="form__save-button" type="submit">Save</button>
-          </form>
-
+                class="form__input form__input_type_description"
+                type="text"
+                placeholder="Description"
+                name="description"
+                required
+              />
+              </fieldset>
+              <button class="form__save-button" type="submit">Save</button>
+            </form>
+          </div>
         </section>
+
+        <!--ADD MODAL-->
+        <section class="modal" id="add-modal">
+          <div class="modal__container">
+            <form class="modal__form" id=" add-card-form">
+              <button class="modal__close-button" type="button"></button>
+              <h2 class="form__title">New Place</h2>
+              <fieldset class="form__fieldset">
+                <label for="name" class="form__label"></label>
+                <input
+                class="form__input form__input_type_title"
+                type="text"
+                placeholder="Title"
+                name="title"
+                required
+              />
+              <label for="description" class="form__label"></label>
+              <input
+                class="form__input form__input_type_url"
+                type="text"
+                placeholder="Image URL"
+                name="URL"
+                required
+              />
+              </fieldset>
+              <button class="form__save-button" type="submit">Save</button>
+            </form>
+          </div>
+        </section>
+
         <section class="cards"></section>
 
         <template id="card-template">
@@ -81,9 +113,7 @@
             <img src="" class="card__image" alt="">
             <div class="card__info">
               <h2 class="card__title"></h2>
-              <button class="card__button" type="button">
-                <img class="card__button-like" src="./images/like-icon.svg" alt="like-button" />
-              </button>
+              <button class="card__like-button" type="button"></button>
             </div>
           </li>
         </template> 
