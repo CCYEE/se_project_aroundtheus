@@ -50,6 +50,7 @@ const closeEditModalButton = editProfileModal.querySelector(
   ".modal__close-button"
 );
 
+// Picture Popup
 const popupModal = document.querySelector("#modal__popup");
 const popupImg = document.querySelector(".modal__popup_img");
 const popupTitle = document.querySelector(".modal__popup_title");
@@ -67,19 +68,16 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
-
 function newCard(cardData, wrapper) {
   const cardElement = getCardElement(cardData);
   wrapper.prepend(cardElement);
 }
-
 function handleProfileFormSubmit(event) {
   event.preventDefault();
   userAuthor.textContent = modalEditName.value;
   userDescription.textContent = modalEditDescription.value;
   closeModal(editProfileModal);
 }
-
 function handleAddCardFormSubmit(event) {
   event.preventDefault();
   const name = modalEditTitle.value;
@@ -87,7 +85,6 @@ function handleAddCardFormSubmit(event) {
   newCard({ name, link }, cardListEl);
   closeModal(addCardModal);
 }
-
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -106,7 +103,7 @@ function getCardElement(cardData) {
   cardImageEl.alt = cardData.name;
   cardNameEl.textContent = cardData.name;
 
-  FIXME: cardImageEl.addEventListener("click", () => {
+  cardImageEl.addEventListener("click", () => {
     openModal(popupModal);
     popupImg.src = cardData.link;
     popupTitle.textContent = cardData.name;

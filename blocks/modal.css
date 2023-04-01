@@ -48,11 +48,12 @@
   transform: translate(-50%, 0);
   top: 90px;
   left: 50%;
-  /* margin: 0 auto; */
+}
+
+.modal__popup_img {
   max-width: 75vw;
   max-height: 75vh;
 }
-
 
 .modal__popup_title {
   font-family: "Inter", Arial, sans-serif;
