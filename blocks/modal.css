@@ -8,7 +8,7 @@
 }
 
 .modal_opened {
-  display: flex;
+  display: block;
 }
 
 .modal__container {
@@ -42,6 +42,20 @@
 
 .modal__close-button:hover {
   opacity: 0.6;
+}
+
+.modal__poup_container {
+  max-width: 75vw;
+  max-height: 75vh;
+  position: relative;
+  margin: 0 auto;
+  top: 90px;
+  /* box-sizing: border-box; */
+}
+.modal__popup_title {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14.52px;
 }
 
 @media screen and (max-width: 425px) {
