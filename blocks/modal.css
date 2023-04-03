@@ -47,7 +47,7 @@
   opacity: 0.6;
 }
 
-.modal__popup_container {
+.modal__popup-container {
   position: fixed;
   transform: translate(-50%, 0);
   top: 90px;
@@ -57,12 +57,12 @@
   /* transition: visibility 0.35s, opacity 0.35s ease-in; */
 }
 
-.modal__popup_img {
+.modal__popup-img {
   max-width: 75vw;
   max-height: 75vh;
 }
 
-.modal__popup_title {
+.modal__popup-title {
   font-family: "Inter", Arial, sans-serif;
   font-size: 12px;
   line-height: 14.52px;
