@@ -52,10 +52,10 @@ const closeEditModalButton = editProfileModal.querySelector(
 );
 
 // Picture Popup
-const popupModal = document.querySelector("#modal__popup");
-const popupImg = document.querySelector(".modal__popup-img");
-const popupTitle = document.querySelector(".modal__popup-title");
-const popupCloseButton = popupModal.querySelector(".modal__close-button");
+const previewModal = document.querySelector("#modal__popup");
+const previewImg = document.querySelector(".modal__popup-img");
+const previewTitle = document.querySelector(".modal__popup-title");
+const previewCloseButton = previewModal.querySelector(".modal__close-button");
 
 // Cards
 const cardListEl = document.querySelector(".cards");
@@ -106,10 +106,10 @@ function getCardElement(cardData) {
   cardNameEl.textContent = cardData.name;
 
   cardImageEl.addEventListener("click", () => {
-    openModal(popupModal);
-    popupImg.src = cardData.link;
-    popupImg.alt = cardData.name;
-    modalImageCaptionEl.textContent = data.name;
+    openModal(previewModal);
+    previewImg.src = cardData.link;
+    previewImg.alt = cardData.name;
+    previewTitle.textContent = cardData.name;
   });
 
   return cardElement;
@@ -140,6 +140,6 @@ initialCards.forEach((cardData) => {
   renderCard(cardData, cardListEl);
 });
 
-popupCloseButton.addEventListener("click", () => {
-  closeModal(popupModal);
+previewCloseButton.addEventListener("click", () => {
+  closeModal(previewModal);
 });
