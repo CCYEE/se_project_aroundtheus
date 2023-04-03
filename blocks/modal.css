@@ -1,14 +1,17 @@
 .modal {
   position: fixed;
-  display: none;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   color: black;
   z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.35s, opacity 0.35s ease-in;
 }
 
 .modal_opened {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -37,6 +40,7 @@
   border: none;
   cursor: pointer;
   transition: opacity 0.35s;
+
 }
 
 .modal__close-button:hover {
@@ -48,6 +52,9 @@
   transform: translate(-50%, 0);
   top: 90px;
   left: 50%;
+  /* visibility: hidden; */
+  /* opacity: 1; */
+  /* transition: visibility 0.35s, opacity 0.35s ease-in; */
 }
 
 .modal__popup_img {
