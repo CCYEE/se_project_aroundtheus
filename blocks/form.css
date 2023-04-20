@@ -55,7 +55,7 @@
   opacity: 0.8;
 }
 
-.form__input_error {
+.form__error {
   color: red;
   font-family: "Inter", Arial, sans-serif;
   font-size: 12px;
@@ -65,7 +65,7 @@
   margin-bottom: 13px;
   padding: 0;
 }
-.form__input_error:last-of-type {
+.form__error:last-of-type {
   margin-bottom: 31.34px;
 }
 .form__input_type_error {
