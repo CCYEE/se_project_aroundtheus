@@ -69,6 +69,7 @@ function openModal(modal) {
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalEsc);
 }
 function closeModalEsc(evt) {
   if (evt.key === "Escape") {
@@ -107,7 +108,14 @@ function handleAddCardFormSubmit(event) {
   const name = modalEditTitle.value;
   const link = modalEditUrl.value;
   renderCard({ name, link }, cardListEl);
-  addCardForm.reset();
+  event.target.reset();
+
+  toggleButtonState(
+    Array.from(addCardForm.querySelectorAll(config.inputSelector)),
+    addCardForm.querySelector(config.submitButtonSelector),
+    config
+  );
+
   closeModal(addCardModal);
 }
 function getCardElement(cardData) {
