@@ -1,10 +1,5 @@
-// const formElement = document.querySelectorAll(".modal__form");
-// const formInputElement = formElement.querySelectorAll(".form__input");
-
 function showInputError(formElement, inputElement, options) {
-  const errorMessageElement = formElement.querySelector(
-    `#${inputElement.id}-error`
-  );
+  const errorMessageElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.add(options.inputErrorClass);
   errorMessageElement.textContent = inputElement.validationMessage;
   errorMessageElement.classList.add(options.errorClass);
@@ -29,16 +24,6 @@ function checkInputValidity(formElement, inputElement, options) {
 function hasInvalidInput(inputList) {
   return !inputList.every((inputElement) => inputElement.validity.valid);
 }
-
-// FIXME:
-// function disableButton(button, {inactiveButtonClass}) {
-//   button.classList.remove(inactiveButtonClass);
-//   button.disabled = false;
-// }
-// function enableButton(button) {
-//   button.classList.add(inactiveButtonClass);
-//   button.disabled = false;
-// }
 
 function toggleButtonState(
   inputElements,
