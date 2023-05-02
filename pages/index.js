@@ -62,9 +62,9 @@ const closeEditModalButton = editProfileModal.querySelector(
 );
 
 // Picture Popup
-const previewModal = document.querySelector("#modal__popup");
-const previewImg = document.querySelector(".modal__popup-img");
-const previewTitle = document.querySelector(".modal__popup-title");
+export const previewModal = document.querySelector("#modal__popup");
+export const previewImg = document.querySelector(".modal__popup-img");
+export const previewTitle = document.querySelector(".modal__popup-title");
 const previewCloseButton = previewModal.querySelector(".modal__close-button");
 
 // Cards

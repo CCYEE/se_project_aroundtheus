@@ -1,5 +1,10 @@
-// import { openModal } from "../utils/utils.js";
+import { openModal } from "../utils/utils.js";
 
+import {
+  previewModal,
+  previewImg,
+  previewTitle,
+} from "../pages/index.js";
 
 
 export default class Card {
@@ -54,9 +59,7 @@ export default class Card {
     this._cardElement = null;
   }
   _handleCardClick() {
-    const previewModal = this._cardElement.querySelector("#modal__popup");
-    const previewImg = this._cardElement.querySelector(".modal__popup-img");
-    const previewTitle = this._cardElement.querySelector(".modal__popup-title");
+
 
     openModal(previewModal);
     previewImg.src = this._link;
