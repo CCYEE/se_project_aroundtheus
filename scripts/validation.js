@@ -14,9 +14,6 @@ function hideInputError(formElement, inputElement, options) {
   errorMessageElement.classList.remove(options.errorClass);
 }
 
-function checkFormValidity(inputs) {
-  return inputs.every((input) => input.validity.valid);
-}
 function checkInputValidity(formElement, inputElement, options) {
   if (!inputElement.validity.valid) {
     return showInputError(formElement, inputElement, options);
@@ -28,23 +25,8 @@ function hasInvalidInput(inputList) {
   return !inputList.every((inputElement) => inputElement.validity.valid);
 }
 
-function disableButton(button, inactiveButtonClass) {
-  button.classList.add(inactiveButtonClass);
-  button.disabled = true;
-}
-function enableButton(button, inactiveButtonClass) {
-  button.classList.remove(inactiveButtonClass);
-  button.disabled = false;
-}
 
 function toggleButtonState(inputElements, submitButton ,{ inactiveButtonClass }) {
-  const checkFormValid = checkFormValidity(inputElements);
-
-  if (checkFormValid) {
-    enableButton(submitButton, inactiveButtonClass);
-  } else {
-    disableButton(submitButton, inactiveButtonClass);
-  }
 
   if (hasInvalidInput(inputElements)) {
     submitButton.classList.add(inactiveButtonClass);
