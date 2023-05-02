@@ -32,9 +32,9 @@ export default class Card {
       this._handleDeleteButton();
     });
 
-    // cardImageEl.src = this._link;
-    // cardImageEl.alt = this._name;
-    // cardNameEl.textContent = this._name;
+    cardImageEl.src = this._link;
+    cardImageEl.alt = this._name;
+    cardNameEl.textContent = this._name;
 
     cardImageEl.addEventListener("click", () => {
       this._handleCardClick();
