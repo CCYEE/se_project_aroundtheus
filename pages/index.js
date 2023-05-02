@@ -1,5 +1,6 @@
 import Card from "../components/Card.js";
-// import { openModal, closeModal, closeModalEsc, closeModalClick } from "../utils/utils.js";
+import FormValidator from "../components/FormValidator.js";
+import { openModal, closeModal, closeModalEsc, closeModalClick } from "../utils/utils.js";
 
 const initialCards = [
   {
@@ -67,12 +68,28 @@ export const previewImg = document.querySelector(".modal__popup-img");
 export const previewTitle = document.querySelector(".modal__popup-title");
 const previewCloseButton = previewModal.querySelector(".modal__close-button");
 
+// Validation
+const config = {
+  formSelector: ".modal__form",
+  inputSelector: ".form__input",
+  submitButtonSelector: ".form__save-button",
+  inactiveButtonClass: "form__save-button_disabled",
+  inputErrorClass: "form__input_type_error",
+  errorClass: "form__error_visible",
+};
+
+// Enable Validation
+const editFormValidator = new FormValidator(config, editForm);
+editFormValidator.enableValidation();
+const addFormValidator = new FormValidator(config, addCardForm);
+addFormValidator.enableValidation();
+
 // Cards
 const cardListEl = document.querySelector(".cards");
-const cardTemplate =
-  document.querySelector("#card-template").content.firstElementChild;
+// const cardTemplate =
+//   document.querySelector("#card-template").content.firstElementChild;
 
-// OPEN/CLOSE Modals
+// Open/Close Modals
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", closeModalEsc);

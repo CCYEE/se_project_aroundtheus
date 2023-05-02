@@ -28,7 +28,7 @@ export default class Card {
     const deleteButton = this._cardElement.querySelector(".card__trash-button");
     const cardImageEl = this._cardElement.querySelector(".card__image");
     const cardNameEl = this._cardElement.querySelector(".card__title");
-
+    
     likeButton.addEventListener("click", () => {
       this._handleLikeIcon();
     });
@@ -44,8 +44,6 @@ export default class Card {
     cardImageEl.addEventListener("click", () => {
       this._handleCardClick();
     })
-
-
   }
 
   // HANDLERS
@@ -59,15 +57,11 @@ export default class Card {
     this._cardElement = null;
   }
   _handleCardClick() {
-
-
     openModal(previewModal);
     previewImg.src = this._link;
     previewImg.alt = `Photo of ${this._name}`;
     previewTitle.textContent = this._name;
-
   }
-
 
   getView() {
     this._cardElement = this._getTemplate();
@@ -78,7 +72,5 @@ export default class Card {
 
     return this._cardElement;
   }
-
-
 }
 
