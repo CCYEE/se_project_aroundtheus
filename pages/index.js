@@ -104,13 +104,8 @@ function handleAddCardFormSubmit(event) {
   const name = modalEditTitle.value;
   const link = modalEditUrl.value;
   renderCard({ name, link }, cardListEl);
+  
   event.target.reset();
-
-  toggleButtonState(
-    Array.from(addCardForm.querySelectorAll(config.inputSelector)),
-    addCardForm.querySelector(config.submitButtonSelector),
-    config
-  );
 
   closeModal(addCardModal);
 }
