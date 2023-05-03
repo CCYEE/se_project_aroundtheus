@@ -6,7 +6,7 @@ export default class FormValidator {
     this._inputErrorClass = settings.inputErrorClass;
     this._errorClass = settings.errorClass;
 
-    this._form = settings.formElement;
+    this._form = formElement;
     console.log(this._form);
   }
 
@@ -63,16 +63,4 @@ export default class FormValidator {
     });
     this._setEventListeners();
   }
-
-
 }
-
-
-// const settings = {
-//   formSelector: ".modal__form",
-//   inputSelector: ".form__input",
-//   submitButtonSelector: ".form__save-button",
-//   inactiveButtonClass: "form__save-button_disabled",
-//   inputErrorClass: "form__input_type_error",
-//   errorClass: "form__error_visible",
-// };
