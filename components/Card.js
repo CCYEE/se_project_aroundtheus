@@ -52,7 +52,7 @@ export default class Card {
   }
   _handleDeleteButton() {
     this._cardElement.remove();
-    // this._cardElement = null;
+    this._cardElement = null;
   }
   _handleCardClick() {
     openModal(previewModal);
