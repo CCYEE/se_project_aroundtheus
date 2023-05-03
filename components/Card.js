@@ -37,9 +37,7 @@ export default class Card {
       this._handleDeleteButton();
     });
 
-    cardImageEl.src = this._link;
-    cardImageEl.alt = this._name;
-    cardNameEl.textContent = this._name;
+
 
     cardImageEl.addEventListener("click", () => {
       this._handleCardClick();
@@ -54,7 +52,7 @@ export default class Card {
   }
   _handleDeleteButton() {
     this._cardElement.remove();
-    this._cardElement = null;
+    // this._cardElement = null;
   }
   _handleCardClick() {
     openModal(previewModal);

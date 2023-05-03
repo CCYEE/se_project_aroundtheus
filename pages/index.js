@@ -1,6 +1,6 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
-import { openModal, closeModal, closeModalEsc, closeModalClick } from "../utils/utils.js";
+import { openModal, closeModal } from "../utils/utils.js";
 
 const initialCards = [
   {
@@ -28,12 +28,6 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
-
-const data = {
-  name: "Yosemite Valley",
-  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
-}
-
 
 // Variables
 const userAuthor = document.querySelector(".profile__author");
@@ -104,8 +98,9 @@ function handleAddCardFormSubmit(event) {
   const name = modalEditTitle.value;
   const link = modalEditUrl.value;
   renderCard({ name, link }, cardListEl);
-  
+
   event.target.reset();
+  addFormValidator.toggleButtonState();
 
   closeModal(addCardModal);
 }
@@ -113,17 +108,6 @@ function handleAddCardFormSubmit(event) {
 // Event Listeners
 editProfileModal.addEventListener("submit", handleProfileFormSubmit);
 addCardModal.addEventListener("submit", handleAddCardFormSubmit);
-
-// Click Close
-editProfileModal.addEventListener("click", (evt) =>
-  closeModalClick(editProfileModal, evt)
-);
-addCardModal.addEventListener("click", (evt) =>
- closeModalClick(addCardModal, evt)
-);
-previewModal.addEventListener("click", (evt) =>
-closeModalClick(previewModal, evt)
-);
 
 // Button Open/Close
 editProfileButton.addEventListener("click", () => {
