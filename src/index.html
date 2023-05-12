@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chris Yee">
-    <meta
-      name="description"
-      content="A gallery of beautiful mountain sceneries"
-    >
-    <meta name="keywords" content="HTML, CSS">
-    <link rel="shortcut icon" href="./favicon.ico">
-    <title>Take me Home, Country Road</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alan Shieh" />
+    <meta name="description" content="A gallery of beautiful mountain sceneries" />
+    <meta name="keywords" content="HTML, CSS" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <!-- <link rel="stylesheet" href="./pages/index.css" /> -->
+    <title>Adventure Time</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img
-          class="header__logo"
-          src="<%=require('./images/logo.svg')%>"
-          alt="Around the US logo"
-        >
+        <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Around the US logo" />
       </header>
 
       <main class="main">
         <section class="profile">
-          <img
-            class="profile__picture"
-            src="<%=require('./images/profile-pic.png')%>"
-            alt="Picture of Explorer, Jacques Cousteau"
-          >
+          <img class="profile__picture" src="<%=require('./images/profile-pic.png')%>" alt="Picture of Explorer, Jacques Cousteau" />
           <div class="profile__info">
             <div class="profile__title">
-              <h1 class="profile__author">
-                Jacques Cousteau
-              </h1>
+              <h1 class="profile__author">Jacques Cousteau</h1>
 
               <button class="profile__edit-button" type="button"></button>
             </div>
 
-            <p class="profile__subtitle">
-              Explorer
-            </p>
+            <p class="profile__subtitle">Explorer</p>
           </div>
 
           <button class="profile__add-button" type="button"></button>
@@ -60,10 +46,11 @@
                   type="text"
                   placeholder="Name"
                   id="name"
+                  name="name"
                   minlength="2"
                   maxlength="40"
                   required
-                >
+                />
                 <span class="form__error" id="name-error"></span>
                 <label for="description" class="form__label"></label>
                 <input
@@ -71,10 +58,11 @@
                   type="text"
                   placeholder="Description"
                   id="description"
+                  name="description"
                   minlength="2"
                   maxlength="400"
                   required
-                >
+                />
                 <span class="form__error" id="description-error"></span>
               </fieldset>
               <button class="form__save-button" type="submit">Save</button>
@@ -89,26 +77,21 @@
               <button class="modal__close-button" type="button"></button>
               <h2 class="form__title">New Place</h2>
               <fieldset class="form__fieldset">
-                <label for="name" class="form__label"></label>
+                <label for="title" class="form__label"></label>
                 <input
                   class="form__input form__input_type_title"
                   type="text"
                   placeholder="Title"
                   id="title"
-                  minlength="1"
+                  name="title"
+                  inlength="1"
                   maxlength="30"
                   required
-                >
+                />
                 <span class="form__error" id="title-error"></span>
                 <label for="url" class="form__label"></label>
-                <input
-                  class="form__input form__input_type_url"
-                  type="url"
-                  placeholder="Image URL"
-                  id="url"
-                  required
-                >
-                <span class="form__error" id="url-error"></span>
+                <input class="form__input form__input_type_url" type="url" placeholder="Image URL" id="url" name="url" required />
+                <span class="form__error" id="URL-error"></span>
               </fieldset>
               <button class="form__save-button form__save-button_disabled" type="submit" disabled>Save</button>
             </form>
@@ -119,33 +102,29 @@
 
         <template id="card-template">
           <li class="card">
-            <img src="" class="card__image" alt="">
+            <img src="" class="card__image" alt="" />
             <button class="card__trash-button" type="button"></button>
             <div class="card__info">
               <h2 class="card__title"></h2>
               <button class="card__like-button" type="button"></button>
             </div>
           </li>
-        </template> 
+        </template>
 
         <!--PREVIEW MODAL-->
         <section class="modal" id="modal__popup">
-          
           <div class="modal__popup-container">
-            <button class="modal__close-button" type="button"></button>
-            <img class="modal__popup-img" src="#" alt="">
-            <p class="modal__popup-title"></p>
+            <button class="modal__close-button" id="modal-close-button" type="button"></button>
+            <img class="modal__popup-img" id="modal-image" src="#" alt="" />
+            <p class="modal__popup-title" id="modal-caption"></p>
           </div>
-
         </section>
-
-
       </main>
 
       <footer class="footer">
         <p class="footer__copyright">&#169; 2023 Around The U.S.</p>
       </footer>
-      
     </div>
+    <!-- <script type="module" src="./pages/index.js" defer></script> -->
   </body>
 </html>
