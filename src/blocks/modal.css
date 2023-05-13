@@ -50,6 +50,7 @@
   right: -44px;
   transform: rotate(90deg);
   cursor: pointer;
+  transition: opacity 0.45s;
 }
 
 .modal__close:hover {
@@ -114,6 +115,7 @@
   padding: 0;
   cursor: pointer;
   margin: 45px 0 0;
+  transition: opacity 0.45s;
 }
 
 .modal__button:hover {
