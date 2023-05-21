@@ -12,7 +12,9 @@ export default class UserInfo {
     this.job.textContent = job;
   }
   getAvatarInfo() {
-    return this._avatar;
+    return {
+      avatar: this._avatar.src,
+    };
   }
   setAvatarInfo({ name, avatar }) {
     this._avatar.src = avatar;

@@ -201,6 +201,9 @@ api.getApiInfo().then(([userData, cards]) => {
     ".cards__list"
   );
   cardSection.renderItems();
+})
+.catch((error) => {
+  console.log(error);
 });
 
 function handleCardFormSubmit(inputValues) {
